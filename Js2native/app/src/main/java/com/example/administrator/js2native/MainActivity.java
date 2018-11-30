@@ -46,9 +46,10 @@ public class MainActivity extends AppCompatActivity {
 
     class JsInterface{
         @JavascriptInterface
-        public void toaststr(String s){
+        public String toaststr(String s){
             Toast.makeText(MainActivity.this, s, Toast.LENGTH_SHORT).show();
             Log.e("JsInterface", s);
+            return "原生方法返回：success";
         }
     }
 }
